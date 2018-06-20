@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#http://www.ostricher.com/2014/10/the-right-way-to-get-the-directory-of-a-bash-script/
+wd="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Path to script to execute
+path=${wd}/web
+
+if [ "$NODE_ENV" == "development" ]; then
+  # IF WE ARE ON DEV, LOAD THROUGH NODEMON USING CONFIG FILE
+  # Path to nodemon config file
+  nodemonconfig=${wd}/../config/nodemon.json
+
+  nodemon --config ${nodemonconfig} ${path}
+else
+  # JUST RUN VIA NODE
+  node ${path}
+fi

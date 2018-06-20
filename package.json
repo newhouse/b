@@ -1,0 +1,30 @@
+{
+  "name": "bainco-api",
+  "version": "1.0.0",
+  "description": "Queryable API challenge",
+  "main": "app.js",
+  "scripts": {
+    "start": "./bin/starter",
+    "test": "Make test",
+    "migrate": "knex migrate:latest",
+    "migrate-rollback": "knex migrate:rollback"
+  },
+  "author": "c.newhouse@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "helmet": "^3.12.1",
+    "joi": "^13.4.0",
+    "knex": "^0.14.6",
+    "morgan": "latest",
+    "objection": "^1.1.10",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "dotenv": "^6.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.3"
+  }
+}

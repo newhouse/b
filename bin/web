@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const { app } = require('../app');
+
+const port = parseInt(process.env.PORT) || 3000;
+
+const server = app.listen(port, () => {
+  console.log('we be listening on', port);
+});
+
+module.exports = {
+  server,
+  port
+};
